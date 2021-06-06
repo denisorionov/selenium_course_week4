@@ -11,5 +11,5 @@ class MainPage(BasePage):
         self.should_be_login_link()
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
-        return LoginPage(browser=self.browser, url=self.browser.current_url)
+
 
