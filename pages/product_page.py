@@ -26,5 +26,3 @@ class ProductPage(BasePage):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should disappeared"
 
-    def should_be_message(self):
-        assert self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented"
