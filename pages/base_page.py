@@ -1,5 +1,5 @@
 import math
-from telnetlib import EC
+from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.common.exceptions import NoAlertPresentException, TimeoutException
 from selenium.common.exceptions import NoSuchElementException
@@ -43,3 +43,12 @@ class BasePage:
             return True
 
         return False
+
+    def is_disappeared(self, how, what, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout, 1, TimeoutException). \
+                until_not(EC.presence_of_element_located((how, what)))
+        except TimeoutException:
+            return False
+
+        return True
