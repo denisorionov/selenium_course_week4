@@ -6,7 +6,7 @@ class ProductPage(BasePage):
     def add_product_to_basket(self):
         button = self.browser.find_element(*ProductPageLocators.ADD_BASKET_BUTTON)
         button.click()
-        #self.solve_quiz_and_get_code()
+        self.solve_quiz_and_get_code()
 
     def should_be_book_name(self):
         book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME).text

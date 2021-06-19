@@ -16,13 +16,16 @@ class LoginPage(BasePage):
         assert "login" in self.browser.current_url, "It's not login page"
 
     def should_be_login_form(self):
-        assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), "Login form is not presented"
+        assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), \
+            "Login form is not presented"
 
     def should_be_register_form(self):
-        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Register form is not presented"
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), \
+            "Register form is not presented"
 
     def should_be_register_email_field(self):
-        assert self.is_element_present(*LoginPageLocators.REGISTRATION_EMAIL), "Register email field is not presented"
+        assert self.is_element_present(*LoginPageLocators.REGISTRATION_EMAIL), \
+            "Register email field is not presented"
 
     def should_be_register_password1_field(self):
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_PASSWORD1), \
